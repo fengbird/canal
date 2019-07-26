@@ -64,6 +64,10 @@ public class ESHttpTemplate {
         return bulkRequest;
     }
 
+    public void resetBulkRequest() {
+        this.bulkRequest = new BulkRequest();
+    }
+
     /**
      * 插入数据
      *
@@ -213,6 +217,7 @@ public class ESHttpTemplate {
                     }
                 }
             }
+            resetBulkRequest();
         }
     }
 
