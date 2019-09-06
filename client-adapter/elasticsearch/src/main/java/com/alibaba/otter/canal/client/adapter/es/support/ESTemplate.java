@@ -150,7 +150,7 @@ public class ESTemplate {
             int count = 0;
             try {
                 while (rs.next()) {
-                    Object idVal = getIdValFromRS(mapping, rs);
+                    Object idVal = getESDataFromRS(mapping, rs, esFieldData);
                     append4Update(mapping, idVal, esFieldData);
                     commitBulk();
                     count++;
